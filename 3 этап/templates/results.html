@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Результаты: {{ poll[0] }}</h2>
+
+<ul>
+    {% for option in results %}
+        <li>
+            {{ option[1] }} — <b>{{ option[2] }}</b> голос(ов)
+        </li>
+    {% endfor %}
+</ul>
+
+<br>
+<a href="/dashboard">← Назад в кабинет</a>
+
+{% endblock %}

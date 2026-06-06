@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Личный кабинет</h2>
+
+<p>Ваши опросы:</p>
+
+{% if polls %}
+    <ul>
+        {% for poll in polls %}
+            <li>
+                <a href="/poll/{{ poll[0] }}">{{ poll[1] }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>У вас пока нет опросов</p>
+{% endif %}
+
+<br>
+<a href="/create_poll">➕ Создать опрос</a>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Главная страница</h2>
+
+{% if user %}
+    <p>Привет, <b>{{ user }}</b> 👋</p>
+    <p>Выберите действие в меню сверху.</p>
+{% else %}
+    <p>Вы не авторизованы</p>
+    <a href="/login">Войти</a>
+{% endif %}
+
+{% endblock %}
