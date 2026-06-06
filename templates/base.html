@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Polls</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav>
+    <a href="/">Главная</a>
+    <a href="/dashboard">Личный кабинет</a>
+    <a href="/create_poll">Создать опрос</a>
+    <a href="/logout">Выйти</a>
+</nav>
+
+{% block content %}{% endblock %}
+
+</body>
+</html>

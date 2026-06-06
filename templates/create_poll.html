@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Создать опрос</h2>
+
+<form method="post">
+
+    <input type="text" name="title" placeholder="Название опроса" required>
+    <br><br>
+
+    <p>Варианты ответов:</p>
+
+    <input type="text" name="options" placeholder="Вариант 1" required><br>
+    <input type="text" name="options" placeholder="Вариант 2" required><br>
+    <input type="text" name="options" placeholder="Вариант 3"><br>
+    <input type="text" name="options" placeholder="Вариант 4"><br>
+
+    <br>
+    <button type="submit">Создать</button>
+
+</form>
+
+{% endblock %}
