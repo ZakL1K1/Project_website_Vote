@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>{{ poll[1] }}</h2>
+
+<p>Выберите вариант:</p>
+
+<ul>
+    {% for option in options %}
+        <li>{{ option[2] }}</li>
+    {% endfor %}
+</ul>
+
+<p><i>Голосование добавим на следующем этапе</i></p>
+
+{% endblock %}
