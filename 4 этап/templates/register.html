@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="center-page">
+    <div class="auth-card">
+
+        <h2>Регистрация</h2>
+
+        <form method="post">
+            <input name="username" placeholder="Логин" required>
+            <input name="password" type="password" placeholder="Пароль" required>
+            <button type="submit">Создать аккаунт</button>
+        </form>
+
+        <a href="/login">Уже есть аккаунт? Войти</a>
+
+    </div>
+</div>
+
+</body>
+</html>

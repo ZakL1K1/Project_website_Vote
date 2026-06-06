@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>{{ poll[1] }}</h2>
+
+<p>Голосуйте:</p>
+
+<ul>
+    {% for option in options %}
+        <li>
+            {{ option[2] }} -
+            <a href="/vote/{{ option[0] }}/{{ poll[0] }}">Голосовать</a>
+        </li>
+    {% endfor %}
+</ul>
+
+<br>
+<a href="/results/{{ poll[0] }}">📊 Посмотреть результаты</a>
+
+{% endblock %}
